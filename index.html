@@ -17,9 +17,10 @@
     <p>home page</p>
 
     <script>
-      
       const stories = fetch('./stories.json');
-      console.log(stories);
+      const story = JSON.parse(stories)
+      console.log(story)
+
     </script>
 
 </body>
