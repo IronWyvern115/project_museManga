@@ -17,10 +17,19 @@
     <p>home page</p>
 
     <script>
-      const stories = fetch('./stories.json');
-      console.log(stories)
+      fetch('stories.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();  
+                })
+                .then(data => console.log(data))  
+                .catch(error => console.error('Failed to fetch data:', error)); 
 
     </script>
+
+
 
 </body>
 </html>
