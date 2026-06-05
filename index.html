@@ -26,9 +26,11 @@
                 })
                 .then(data => console.log(data))  
                 .catch(error => console.error('Failed to fetch data:', error)); 
+
+      document.getElementById("myText").innerHTML = stories
     </script>
 
-    <p><span id="stories"></span></p>
+    <p><span id="myText"></span></p>
 
 
 
