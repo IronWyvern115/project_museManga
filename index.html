@@ -17,7 +17,7 @@
     <p>home page</p>
 
     <script>
-      fetch('stories.json')
+      const stories = fetch('stories.json')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -28,7 +28,7 @@
                 .catch(error => console.error('Failed to fetch data:', error)); 
     </script>
 
-    <p><span id="counter"></span></p>
+    <p><span id="stories"></span></p>
 
 
 
